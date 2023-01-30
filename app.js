@@ -110,6 +110,7 @@ entradaDados.question('Digite seu nome: \n', function(nome){
                     else
                     {
                         media = (parseFloat(valor1) + parseFloat(valor2) + parseFloat(valor3) + parseFloat(valor4))/4;
+                        // validação se o aluno foi reprovado ou não
                         if(media < 7)
                         {
                             console.log('Status do Aluno: REPROVADO!');
@@ -117,6 +118,7 @@ entradaDados.question('Digite seu nome: \n', function(nome){
                         {
                             console.log('Statatus do Aluno: APROVADO!');
                         }
+                        // "toFixed" permite configurar a quantidade de casas decimais
                         console.log('Média do Aluno: ' + media.toFixed(1));
                     }
 
