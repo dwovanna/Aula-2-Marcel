@@ -99,13 +99,25 @@ entradaDados.question('Digite seu nome: \n', function(nome){
                     }else if(isNaN(valor1) || isNaN(valor2) || isNaN(valor3) || isNaN(valor4))
                     {
                         console.log('ERRO: Voce não digitou um número válido.')
+                    // validação para entrada de dados entre 0 e 10
+                    }else if( valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0)
+                    {
+                        console.log('ERRO: Número minímo é 0')
+                    } else if (valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10)
+                    {
+                        console.log('ERRO: Número máximo é 10')
                     }
                     else
                     {
-                     
                         media = (parseFloat(valor1) + parseFloat(valor2) + parseFloat(valor3) + parseFloat(valor4))/4;
-                    console.log(media);
-
+                        if(media < 7)
+                        {
+                            console.log('Status do Aluno: REPROVADO!');
+                        }else 
+                        {
+                            console.log('Statatus do Aluno: APROVADO!');
+                        }
+                        console.log('Média do Aluno: ' + media.toFixed(1));
                     }
 
                 });
